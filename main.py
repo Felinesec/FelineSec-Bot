@@ -7,7 +7,9 @@ import config
 
     # Comandi del bot
 def server_handler(bot, update):
-    # if update.message.from_user.id in admin_list:
+    if not update.message.from_user.id in config.ADMIN_LIST:
+        update.message.reply_text("User not in the sudoers.")
+        return
     text = (
         "Ecco qua le statistiche del server:\n\n"
         "CPU: " + str(cpu_percent())+"%\n"
