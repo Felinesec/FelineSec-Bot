@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+BOT_TOKEN = "815483816:AAGIhykn-6AyqgJ06vzvgsYdrWW8zlVS9SE"
+
+ADMIN_LIST = [1234567, 6498753]

@@ -1,0 +1,4 @@
+venv
+settings.json
+config.*
+__pycache__
