@@ -6,6 +6,6 @@
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
-BOT_TOKEN = "INSERT_TOKEN_HERE"
+__all__ = ["start_handler", "server_handler", "help_handler"]
 
-ADMIN_LIST = [1234567, 1234567]
+from bot_commands import *

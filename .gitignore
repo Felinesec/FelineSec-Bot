@@ -1,4 +1,4 @@
 venv
 settings.json
-config.*
-__pycache__
+config.py
+config.cpython*
