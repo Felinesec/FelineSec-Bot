@@ -2,3 +2,4 @@ venv
 settings.json
 config.py
 config.cpython*
+*.pyc
