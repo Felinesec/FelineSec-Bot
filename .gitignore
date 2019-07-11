@@ -10,3 +10,4 @@ commands/__pycache__/help.cpython-37.pyc
 commands/__pycache__/newuser.cpython-37.pyc
 commands/__pycache__/server.cpython-37.pyc
 commands/__pycache__/start.cpython-37.pyc
+__pycache__/config.cpython-37.pyc
