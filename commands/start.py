@@ -7,7 +7,6 @@
 #   Mozilla Public License
 #
 from datetime import datetime
-import config
 
 
 def start_handler(bot, update):

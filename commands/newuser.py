@@ -6,7 +6,6 @@
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
-import config
 from datetime import datetime
 
 
@@ -17,7 +16,7 @@ def newuser(bot, update):
                                           chat_title=update.message.chat.title))
 
 
-def init(bot, update):
+def newuser_handler(bot, update):
     newuser(bot, update)
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     print('User: {} con ID: {} '.format(user['username'], user['id'])
