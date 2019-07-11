@@ -7,6 +7,7 @@
 #   Mozilla Public License
 #
 import config
+from datetime import datetime
 
 
 def newuser(bot, update):
@@ -18,3 +19,6 @@ def newuser(bot, update):
 
 def init(bot, update):
     newuser(bot, update)
+    messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
+    print('User: {} con ID: {} '.format(user['username'], user['id'])
+          + "Ha appena eseguito il seguente comando: /server alle ore " + messagetime)

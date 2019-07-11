@@ -6,7 +6,7 @@
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
-import datetime
+from datetime import datetime
 import config
 
 
