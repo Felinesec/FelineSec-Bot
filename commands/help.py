@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-#   example.config.py
+#   help.py
 #   Python 3.7
 #   Version 0.1
 #
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
+from datetime import datetime
+import config
+
+
 def help_handler(bot, update):
     text="/server = Indica le principali statistiche del server (Uptime, utilizzo della cpu e della ram)"
     update.message.reply_text(text)

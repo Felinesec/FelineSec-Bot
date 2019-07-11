@@ -1,11 +1,15 @@
 #!/usr/bin/env python3
-#   example.config.py
+#   start.py
 #   Python 3.7
 #   Version 0.1
 #
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
+import datetime
+import config
+
+
 def start_handler(bot, update):
     text = (
         "Benvenuto!\nEcco qua una lista dei comandi disponibili:\n"

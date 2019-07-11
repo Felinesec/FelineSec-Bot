@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-#   example.config.py
+#   server.py
 #   Python 3.7
 #   Version 0.1
 #
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
+from time import time
+from datetime import timedelta, datetime
+from psutil import cpu_percent, virtual_memory, boot_time
+
 def server_handler(bot, update):
     # if update.message.from_user.id in admin_list:
     text = (
         "Ecco qua le statistiche del server:\n\n"
         "CPU: " + str(cpu_percent())+"%\n"
         "RAM: " + str(virtual_memory().percent)+"%\n"
-        "Uptime: " + str( 
+        "Uptime: " + str(
             timedelta(
                 seconds=(time() - boot_time())
             )

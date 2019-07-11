@@ -1,5 +1,12 @@
-venv
-settings.json
 config.py
-config.cpython*
-*.pyc
+venv/
+.idea/FelineSec-Bot.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/workspace.xml
+commands/__pycache__/__init__.cpython-37.pyc
+commands/__pycache__/help.cpython-37.pyc
+commands/__pycache__/newuser.cpython-37.pyc
+commands/__pycache__/server.cpython-37.pyc
+commands/__pycache__/start.cpython-37.pyc
