@@ -13,6 +13,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler
 
 
 def main():
+
+    # Messaggio di avvio
     starttime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     print("Il bot e' stato avviato con successo alle :", starttime)
 
