@@ -1,10 +1,14 @@
-# FelineSecBot
+ <​h​1​ ​align="centre">​ 
 
-[![Python3.7+](https://img.shields.io/badge/Python-3.7%2B-green.svg)](https://www.python.org/downloads) ![Passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg) [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Group](https://img.shields.io/badge/Group-%40FelineSec-blue.svg)](https://t.me/FelineSec)
+:cat2: ​FelineSec Bot <br>
+
+</h1>
+
+[![Python3.7+](https://img.shields.io/badge/Python-3.7%2B-green.svg)](https://www.python.org/downloads) ![GitHub release](https://img.shields.io/github/release-pre/Felinesec/FelineSec-Bot.svg?color=blue&style=popout)![Passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg) [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Group](https://img.shields.io/badge/Group-%40FelineSec-blue.svg)](https://t.me/FelineSec)
 
 
 
-### Comandi
+### :thought_balloon: ​Comandi
 
 ##### I Comandi già impostati sono:
 
@@ -14,7 +18,7 @@
 
 
 
-### Come creare un comando
+### :memo: Come creare un comando
 
 Per creare un comando serve per prima cosa creare il file del comando _example.py_ sotto la cartella _commands_, poi la struttura del comando dovrà essere:
 
@@ -70,7 +74,9 @@ def main():
    
 ```
 
+### :gear: ​Config
 
+Nel file _example.config.py_ c'è la configurazione di ad esempio **Bot Token** e **Admin List**, l'admin list contiene gli **id** degli utenti amministratori.
 
 ### :open_file_folder: ​Project Tree
 
@@ -88,14 +94,14 @@ def main():
 |   
 |     example.config.py
 |     main.py
-|	  LICENSE.md
+|     LICENSE.md
 |     README.md
 |     requirements.txt
 └───
 
 ```
 
-### Requirements
+### :heavy_exclamation_mark: Requirements
 
 + psutil
 + python-telegram-bot
