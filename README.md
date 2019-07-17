@@ -1,5 +1,8 @@
-<h1 align="centre">
-  FelineSec Bot <br>
+<h1 align="center">
+  <a>
+    <img alt="felineseclogo" src="https://firebasestorage.googleapis.com/v0/b/project-web-test-server.appspot.com/o/img%2Flogo.svg?alt=media&token=e2b831eb-7325-4e9c-91ef-29dc77224aac" width="250" height="350">
+  </a>
+  <br><br> FelineSec Bot <br>
 </h1>
 
 [![Python3.7+](https://img.shields.io/badge/Python-3.7%2B-green.svg)](https://www.python.org/downloads) ![GitHub release](https://img.shields.io/github/release-pre/Felinesec/FelineSec-Bot.svg?color=blue&style=popout)![Passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg) [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Group](https://img.shields.io/badge/Group-%40FelineSec-blue.svg)](https://t.me/FelineSec)
