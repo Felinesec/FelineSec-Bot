@@ -1,6 +1,6 @@
 <h1 align="center">
   <a>
-    <img alt="felineseclogo" src="https://firebasestorage.googleapis.com/v0/b/project-web-test-server.appspot.com/o/img%2Flogo.svg?alt=media&token=e2b831eb-7325-4e9c-91ef-29dc77224aac" width="250" height="350">
+    <img alt="felineseclogo" src="https://firebasestorage.googleapis.com/v0/b/project-web-test-server.appspot.com/o/img%2Flogo.svg.png?alt=media&token=f3502f3f-d81b-4f81-83e4-e8cfaf727d35" width="250" height="320">
   </a>
   <br><br> FelineSec Bot <br>
 </h1>
