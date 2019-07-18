@@ -7,7 +7,7 @@
 #
 import config
 import logging
-from commands import start, server, help, newuser
+from commands import start, server, help, newuser, definisci
 from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler
 
@@ -34,6 +34,7 @@ def main():
     updh(CommandHandler('start', start.start_handler))
     updh(CommandHandler('server', server.server_handler))
     updh(CommandHandler('help', help.help_handler))
+    updh(CommandHandler('definisci', definisci.definisci_handler))
     dp.add_handler(MessageHandler(None, newuser.newuser_handler))
     dp.add_error_handler(error)
 

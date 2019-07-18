@@ -90,6 +90,7 @@ Nel file _example.config.py_ c'è la configurazione di ad esempio **Bot Token** 
 │   |    help.py
 │   |    newuser.py
 │   |    server.py
+|   |    definisci.py
 │   |    start.py
 |   └───
 |   
@@ -107,6 +108,7 @@ Nel file _example.config.py_ c'è la configurazione di ad esempio **Bot Token** 
 + psutil
 + python-telegram-bot
 + datetime
++ wikipedia
 
 
 

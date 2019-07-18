@@ -18,7 +18,7 @@ def newuser(bot, update):
 
 def newuser_handler(bot, update):
     newuser(bot, update)
-    messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
+    #TODO: Unused "messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')"
     print('Il seguente utente {username} e appena entrato nel gruppo {gruppo}'
           .format(username=update.message.from_user.first_name,
-                  gruppo=update.message.chat.title))  # todo accento
+              gruppo=update.message.chat.title))  #TODO: accento
