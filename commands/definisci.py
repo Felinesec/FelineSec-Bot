@@ -1,5 +1,7 @@
 import wikipedia as wiki
 from datetime import datetime
+
+
 def definisci_handler(bot, update):
     
     # Recupero della definizione
