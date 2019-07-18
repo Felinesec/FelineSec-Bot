@@ -75,6 +75,14 @@ def main():
    
 ```
 
+Infine nel file *__init__.py* aggiungiamo il nostro comando:
+
+```python
+__all__ = ["help", "start", "server", "newuser", "example"] <-
+
+from commands import *
+```
+
 ### :gear: ​Config
 
 Nel file _example.config.py_ c'è la configurazione di ad esempio **Bot Token** e **Admin List**, l'admin list contiene gli **id** degli utenti amministratori.

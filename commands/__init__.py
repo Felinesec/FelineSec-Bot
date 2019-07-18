@@ -6,6 +6,6 @@
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
-__all__ = ["help", "start" ,"server" ,"newuser"]
+__all__ = ["help", "start" ,"server" ,"newuser", "definisci"]
 
 from commands import *
