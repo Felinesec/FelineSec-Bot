@@ -3,7 +3,7 @@ import wikipedia as wiki
 def definisci_handler(bot, update):
     
     # Recupero della definizione
-    arg = update.message.text[12:]
+    arg = update.message.text[11:]
     wiki.set_lang('it')
     definizione = wiki.summary(arg)
     
