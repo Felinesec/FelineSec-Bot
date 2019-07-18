@@ -5,7 +5,7 @@
   <br><br> FelineSec Bot <br>
 </h1>
 
-[![Python3.7+](https://img.shields.io/badge/Python-3.7%2B-green.svg)](https://www.python.org/downloads) ![GitHub release](https://img.shields.io/github/release-pre/Felinesec/FelineSec-Bot.svg?color=blue&style=popout)![Passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg) [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Group](https://img.shields.io/badge/Group-%40FelineSec-blue.svg)](https://t.me/FelineSec) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/95904091c7e24a16a0a68c88a344b15e)](https://www.codacy.com/app/Felinesec/FelineSec-Bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Felinesec/FelineSec-Bot&amp;utm_campaign=Badge_Grade)
+[![Python3.7+](https://img.shields.io/badge/Python-3.7%2B-green.svg)](https://www.python.org/downloads) ![GitHub release](https://img.shields.io/github/release-pre/Felinesec/FelineSec-Bot.svg?color=blue&style=popout) ![Passing](https://img.shields.io/badge/Build-Passing-brightgreen.svg) [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Group](https://img.shields.io/badge/Group-%40FelineSec-blue.svg)](https://t.me/FelineSec) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/95904091c7e24a16a0a68c88a344b15e)](https://www.codacy.com/app/Felinesec/FelineSec-Bot?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Felinesec/FelineSec-Bot&amp;utm_campaign=Badge_Grade)
 
 
 
@@ -54,7 +54,7 @@ def example_handler(bot, update):
  
 ```
 
-Poi nel file _main.py_ sotto **#trigger** aggiungere:
+Poi nel file _main.py_ importare il nuovo comando e sotto **#trigger** aggiungere:
 
 ```python
 from commands import start, server, help, example <----
