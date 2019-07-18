@@ -4,6 +4,7 @@ def definisci_handler(bot, update):
     
     # Recupero della definizione
     arg = update.message.text[12:]
+    wiki.set_lang('it')
     definizione = wiki.summary(arg)
     
     # Risposta del Bot
