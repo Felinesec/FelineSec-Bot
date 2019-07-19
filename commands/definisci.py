@@ -11,7 +11,7 @@ def definisci_handler(bot, update):
     title = pg.title
     definizione = pg.summary
 
-    text = "*{}*\n{}".format(title, definizione)
+    text = "*{}:*\n\n{}".format(title, definizione)
 
     # Risposta del Bot
     update.message.reply_markdown(text)

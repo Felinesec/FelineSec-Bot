@@ -35,6 +35,8 @@ def server_handler(bot, update):
             ).strftime("%Y-%m-%d %H:%M:%S")
         )
     )
-    update.message.reply_text(text)
+
+    text_markdown = "`" + text + "`"
+    update.message.reply_markdown(text_markdown)
     print('User: {} con ID: {} '.format(user['username'], user['id'])
           + "Ha appena eseguito il seguente comando: /server alle ore " + messagetime)
