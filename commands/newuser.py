@@ -12,7 +12,7 @@ from datetime import datetime
 def newuser(bot, update):
     for new in update.message.new_chat_members:
         update.message.reply_text('Benvenuto {username} in {gruppo}'
-                                  .format(username=update.message.from_user.first_name,
+                .format(username=update.message.from_user.first_name,
                                           gruppo=update.message.chat.title))
 
 
