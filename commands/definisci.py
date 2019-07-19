@@ -10,7 +10,7 @@ def definisci_handler(bot, update):
     definizione = wiki.summary(arg)
     p = wiki.page(arg)
 
-    text = "**{}**\n{}".format(p.title, definizione}
+    text = "**{}**\n{}".format(p.title, definizione)
 
     # Risposta del Bot
     update.message.reply_text(text)
