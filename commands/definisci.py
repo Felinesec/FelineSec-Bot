@@ -25,7 +25,7 @@ def definisci_handler(bot, update):
 
     link_btn = InlineKeyboardButton("View on Wikipedia", url=pg_url)
     
-    reply_markup = InlineKeyboardMarkup(build_menu(link_bnt, n_cols=1))
+    reply_markup = InlineKeyboardMarkup(build_menu(link_btn, n_cols=1))
 
     text = "*{}:*\n\n{}".format(title, definizione)
 
