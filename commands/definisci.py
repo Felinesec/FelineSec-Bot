@@ -7,10 +7,11 @@ def definisci_handler(bot, update):
     # Recupero della definizione
     arg = update.message.text[5:]
     wiki.set_lang('it')
-    definizione = wiki.summary(arg)
-    p = wiki.page(arg)
+    pg = wiki.page(wiki.search(arg)[0])
+    title = pg.title
+    definizione = pg.summary
 
-    text = "**{}**\n{}".format(p.title, definizione)
+    text = "**{}**\n{}".format(title, definizione)
 
     # Risposta del Bot
     update.message.reply_text(text)
