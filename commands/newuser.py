@@ -15,7 +15,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from datetime import datetime 
 
 def newuser(bot, update):
-    with open('rules.json') as f:
+    with open('commands/rules.json') as f:
         data = json.load(f)
 
     rules = data['rules']
