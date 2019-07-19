@@ -11,7 +11,7 @@
 import wikipedia as wiki
 from datetime import datetime
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from build_menu import build_menu
+import build_menu
 
 
 def definisci_handler(bot, update):

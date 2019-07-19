@@ -10,7 +10,7 @@
 #
 
 import json
-from build_menu import build_menu
+import build_menu
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from datetime import datetime 
 
