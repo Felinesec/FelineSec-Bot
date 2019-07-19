@@ -8,9 +8,15 @@ def definisci_handler(bot, update):
     arg = update.message.text[5:]
     wiki.set_lang('it')
     definizione = wiki.summary(arg)
-    
+    p = wiki.page(arg)
+
+    text = {
+        "**{}**\n".format(p.title)
+        "{}".format(definizione)
+    }
+
     # Risposta del Bot
-    update.message.reply_text(definizione)
+    update.message.reply_text(text)
     
     # LOG del bot
     user = update.message.from_user
