@@ -1,6 +1,6 @@
 import wikipedia as wiki
 from datetime import datetime
-from telegram.ext import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 
 def build_menu(buttons,
                n_cols,
