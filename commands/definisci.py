@@ -14,7 +14,7 @@ def definisci_handler(bot, update):
     text = "*{}*\n{}".format(title, definizione)
 
     # Risposta del Bot
-    update.message.reply_text(text)
+    update.message.reply_markdown(text)
     
     # LOG del bot
     user = update.message.from_user
