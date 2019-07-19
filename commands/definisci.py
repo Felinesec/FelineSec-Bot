@@ -23,9 +23,9 @@ def definisci_handler(bot, update):
     pg_url = pg.url
     definizione = pg.summary
 
-    link_btn = InlineKeyboardButton("View on Wikipedia", url=pg_url)
+    button_list = [InlineKeyboardButton("View on Wikipedia", url=pg_url)]
     
-    reply_markup = InlineKeyboardMarkup(build_menu(link_btn, n_cols=1))
+    reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=1))
 
     text = "*{}:*\n\n{}".format(title, definizione)
 
