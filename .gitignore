@@ -1,5 +1,5 @@
 config.py
-.venv/
+\.venv/
 .idea/FelineSec-Bot.iml
 .idea/misc.xml
 .idea/modules.xml
