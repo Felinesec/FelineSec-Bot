@@ -15,7 +15,7 @@ def rules_handler(bot, update):
     with open('commands/felinesec.rules.json') as rules_js:
         data = json.load(rules_js)
 
-    rules = "*Regole:\n\n{rules}*".format(rules=data['rules'])
+    rules = "*Regole:*\n\n{rules}".format(rules=data['rules'])
 
     update.message.reply_markdwon(rules)
 
