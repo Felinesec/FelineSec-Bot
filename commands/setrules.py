@@ -8,6 +8,8 @@
 #
 
 import json
+from datetime import datetime
+
 
 def setrules_handler(bot, update):
     new_rules = "{}".format(update.message.text[10:])
