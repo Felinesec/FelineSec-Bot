@@ -48,7 +48,11 @@ def main():
     updh(CommandHandler('rules', rules.rules_handler))
     updh(CommandHandler('wiki', definisci.definisci_handler))
     updh(CommandHandler('setrules', setrules.setrules_handler))
+<<<<<<< HEAD
     dp.add_handler(CallbackQueryHandler(rules_button))
+=======
+    dp.add_handler(CallbackQueryHandler(newuser.btn_rules_handler))
+>>>>>>> master
     dp.add_handler(MessageHandler(None, newuser.newuser_handler))
     dp.add_error_handler(error)
 
