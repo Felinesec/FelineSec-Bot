@@ -17,7 +17,7 @@ def rules_handler(bot, update):
 
     rules = "*Regole:*\n\n{rules}".format(rules=data['rules'])
 
-    update.message.reply_markdwon(rules)
+    update.message.reply_markdown(rules)
 
 # LOG del bot
     user = update.message.from_user
