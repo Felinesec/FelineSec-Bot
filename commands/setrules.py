@@ -10,8 +10,10 @@
 import json
 
 def setrules_handler(bot, update):
-    rules = '{rules: "{update.message.text[9:]}"}'
-    with open('commands/rules.json') as rules_js:
+    new_rules = "{}".format(update.message.text[10:])
+
+    rules = {"rules": new_rules }
+    with open('commands/rules.json', 'w') as rules_js:
         json.dump(rules, rules_js)
 
     update.message.reply_markdown("*Regole applicate!*")
