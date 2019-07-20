@@ -34,7 +34,7 @@ def main():
     updh(CommandHandler('start', start.start_handler))
     updh(CommandHandler('server', server.server_handler))
     updh(CommandHandler('help', help.help_handler))
-    dpdh(CommandHandler('rules', rules.rules_handler))
+    updh(CommandHandler('rules', rules.rules_handler))
     updh(CommandHandler('wiki', definisci.definisci_handler))
     updh(CommandHandler('setrules', setrules.setrules_handler))
     dp.add_handler(MessageHandler(None, newuser.newuser_handler))
