@@ -3,7 +3,7 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Talebian
+#   Created by Talebian & Francesco Masala
 #   Mozilla Public License
 #
 
