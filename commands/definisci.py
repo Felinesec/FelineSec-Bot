@@ -32,7 +32,6 @@ def definisci_handler(bot, update):
 
     # Risposta del Bot
     update.message.reply_markdown(text, reply_markup=reply_markup)
-    
     # LOG del bot
     user = update.message.from_user
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
