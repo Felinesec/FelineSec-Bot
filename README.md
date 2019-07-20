@@ -15,6 +15,9 @@
 
 + **/start** per l'avvio del bot
 + **/help** per avere una lista dei comandi disponibili
++ **/wiki {arg}** per cercare su wikipedia
++ **/setrules {arg}** per impostare le regole
++ **/rules** per vedere le regole
 + **/server** per avere le statistiche d'uso del server _( CPU, RAM, Uptime, Boot Time)_
 
 
