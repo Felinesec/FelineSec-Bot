@@ -11,7 +11,7 @@ import json
 from datetime import datetime
 
 
-def rules_handler(bot, update):    
+def rules_handler(bot, update):
     with open('commands/felinesec.rules.json') as rules_js:
         data = json.load(rules_js)
 
