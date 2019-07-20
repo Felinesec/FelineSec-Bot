@@ -11,9 +11,15 @@
 
 import json
 from commands.build_menu import build_menu
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from datetime import datetime
 
+def getrules(file):
+    with open(file) as f:
+        data = json.load(f)
+
+    rules = data['rules']
+    return rules
 
 def newuser(bot, update):
     with open('commands/felinesec.rules.json') as f:
@@ -33,6 +39,14 @@ def newuser(bot, update):
                                                          user_id=update.message.from_user.id,
                                                          group=update.message.chat.title), reply_markup=reply_markup)
                     
+
+
+def btn_rules_handler(bot, update):
+    rules = getrules('commands/felinesec.rules.json')
+    query = update.callback_query
+    if query.data == "rules":
+        return rules
+    print("Rules")
 
 
 def newuser_handler(bot, update):
