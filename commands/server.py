@@ -17,7 +17,7 @@ def server_handler(bot, update):
         update.message.reply_text("User not in the sudoers list.")
         print('User: {} con ID: {} '.format(user['username'], user['id'])
               + "Ha provato ed eseguire il comando /server alle ore: " + messagetime
-              + "\n La sua richiesta e' stata rifiutata poiche' esso non rientra nella lista sudoers"
+              + "\n La sua richiesta \u00e8 stata rifiutata poich\u00e8 esso non rientra nella lista sudoers"
               )
         return
     text = (

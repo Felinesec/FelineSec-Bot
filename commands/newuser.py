@@ -5,7 +5,7 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Talebian
+#   Created by Francesco Masala & Talebian
 #   Mozilla Public License
 #
 
@@ -36,7 +36,7 @@ def newuser_handler(bot, update):
     newuser(bot, update)
 
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
-    print('Il seguente utente {username} � appena entrato nel gruppo {gruppo} alle {orario}'
+    print('Il seguente utente {username} \u00e8 appena entrato nel gruppo {gruppo} alle {orario}'
           .format(username=update.message.from_user.first_name,
                   gruppo=update.message.chat.title,
                   orario=messagetime))

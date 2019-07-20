@@ -14,5 +14,6 @@ commands/__pycache__/rules.cpython-37.pyc
 commands/__pycache__/setrules.cpython-37.pyc
 commands/__pycache__/definisci.cpython-37.pyc
 __pycache__/config.cpython-37.pyc
-
 \.idea/
+
+commands/__pycache__/
