@@ -11,15 +11,17 @@ import logging
 from commands import start, server, help, newuser, definisci, rules, setrules
 from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
+import telegram
 
 
 def rules_button(bot, update):
     with open('commands/felinesec.rules.json') as f:
-        rules = json.load(f)['rules']
+        data = json.load(f)
 
     query = update.callback_query
+    rules = data['rules']
     if query.data == "rules":
-        update.message.reply_text(query.message.chat_id, rules)
+        bot.send_message(query.message.chat_id,"*Regole:*\n\n{rules_txt}".format(rules_txt=rules), parse_mode=telegram.ParseMode.MARKDOWN)
 
 def main():
 
