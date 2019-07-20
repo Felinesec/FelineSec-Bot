@@ -15,7 +15,6 @@ from commands.build_menu import build_menu
 
 
 def definisci_handler(bot, update):
-    
     # Recupero della definizione
     arg = update.message.text[5:]
     wiki.set_lang('it')
@@ -23,16 +22,11 @@ def definisci_handler(bot, update):
     title = pg.title
     pg_url = pg.url
     definizione = pg.summary
-
     button_list = [InlineKeyboardButton("View on Wikipedia", url=pg_url)]
-    
     reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=1))
-
     text = "*{}:*\n\n{}".format(title, definizione)
-
     # Risposta del Bot
     update.message.reply_markdown(text, reply_markup=reply_markup)
-    
     # LOG del bot
     user = update.message.from_user
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
