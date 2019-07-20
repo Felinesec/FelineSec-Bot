@@ -9,7 +9,7 @@ import config
 import logging
 from commands import start, server, help, newuser, definisci, setrules
 from datetime import datetime
-from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler
 
 
 def main():
