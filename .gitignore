@@ -10,9 +10,15 @@ commands/__pycache__/help.cpython-37.pyc
 commands/__pycache__/newuser.cpython-37.pyc
 commands/__pycache__/server.cpython-37.pyc
 commands/__pycache__/start.cpython-37.pyc
+<<<<<<< HEAD
 commands/__pycache__/definisci.cpython-37.pyc
 commands/__pycache__/setrules.cpython-37.pyc
 commands/__pycache__/build_menu.cpython-37.pyc
+=======
+commands/__pycache__/rules.cpython-37.pyc
+commands/__pycache__/setrules.cpython-37.pyc
+commands/__pycache__/definisci.cpython-37.pyc
+>>>>>>> 6fdcc6a5fa4ca8bdb190d0d298782914353322f4
 __pycache__/config.cpython-37.pyc
 
 \.idea/
