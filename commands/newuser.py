@@ -12,7 +12,8 @@
 import json
 from commands.build_menu import build_menu
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from datetime import datetime 
+from datetime import datetime
+
 
 def newuser(bot, update):
     with open('commands/rules.json') as f:
@@ -23,7 +24,6 @@ def newuser(bot, update):
                    InlineKeyboardButton("Gruppo OT", url="https://t.me/FelineSecOT"),
                    InlineKeyboardButton("Sito", url="https://felinesec.com"),
                    InlineKeyboardButton("Forum", url="https://forum.felinesec.com")]
-    
     reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=2))
 
     for new in update.message.new_chat_members:
