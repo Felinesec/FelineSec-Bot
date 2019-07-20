@@ -38,5 +38,3 @@ def definisci_handler(bot, update):
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     print('User: {} con ID: {} '.format(user['username'], user['id'])
           + "Ha appena eseguito il seguente comando: /wiki alle ore " + messagetime)
-    
-
