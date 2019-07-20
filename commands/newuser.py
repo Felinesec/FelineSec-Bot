@@ -40,6 +40,8 @@ def newuser(bot, update):
                                                          group=update.message.chat.title), reply_markup=reply_markup)
                     
 
+<<<<<<< HEAD
+=======
 
 def btn_rules_handler(bot, update):
     rules = getrules('commands/felinesec.rules.json')
@@ -49,6 +51,7 @@ def btn_rules_handler(bot, update):
     print("Rules")
 
 
+>>>>>>> master
 def newuser_handler(bot, update):
     newuser(bot, update)
 
