@@ -20,7 +20,7 @@ def newuser(bot, update):
 
     rules = data['rules']
     button_list = [InlineKeyboardButton("Regole", callback_data=rules),
-                   InlineKeyboardButton("Gruppo OT", url="t.me/FelineSecOT"),
+                   InlineKeyboardButton("Gruppo OT", url="https://t.me/FelineSecOT"),
                    InlineKeyboardButton("Sito", url="https://felinesec.com"),
                    InlineKeyboardButton("Forum", url="https://forum.felinesec.com")]
     
