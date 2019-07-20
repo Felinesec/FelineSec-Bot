@@ -33,7 +33,6 @@ def newuser(bot, update):
                                                          group=update.message.chat.title), reply_markup=reply_markup)
 
 
-
 def newuser_handler(bot, update):
     newuser(bot, update)
 

@@ -6,13 +6,24 @@
 #   Mozilla Public License
 #
 import config
+import json
 import logging
 from commands import start, server, help, newuser, definisci, rules, setrules
 from datetime import datetime
-from telegram.ext import Updater, CommandHandler, MessageHandler
+from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
 
+
+def rules_button(bot, update):
+    with open('commands/felinesec.rules.json') as f:
+        rules = json.load(f)['rules']
+
+    query = update.callback_query
+    if query.data == "rules":
+        update.message.reply_text(query.message.chat_id, rules)
 
 def main():
+
+
 
     # Messaggio di avvio
     starttime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
@@ -37,6 +48,7 @@ def main():
     updh(CommandHandler('rules', rules.rules_handler))
     updh(CommandHandler('wiki', definisci.definisci_handler))
     updh(CommandHandler('setrules', setrules.setrules_handler))
+    dp.add_handler(CallbackQueryHandler(rules_button))
     dp.add_handler(MessageHandler(None, newuser.newuser_handler))
     dp.add_error_handler(error)
 
