@@ -17,3 +17,5 @@ __pycache__/config.cpython-37.pyc
 \.idea/
 
 commands/__pycache__/
+
+\.DS_Store
