@@ -15,7 +15,8 @@ def help_handler(bot, update):
         "*/wiki {arg}*: cerca la definizione su wikipedia\n"
         "*/setrules {arg}*: imposta le regole\n"
         "*/rules {arg}*:vedi le regole\n"
-        "*/help*: mostra questa guida"
+        "*/help*: mostra questa guida\n"
+        "*/ping*: effetua un ping su *google.com*\n"
     )
     update.message.reply_markdown(text)
     user = update.message.from_user
