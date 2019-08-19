@@ -50,3 +50,14 @@ def ownerbot(func):
             return
         return func(bot, update)
     return wrapped
+
+#COMANDI PRIVATI
+def private(fn):
+  def wrapper(*args,**kwargs):
+    
+    message = args[1].message
+    if message.chat.type == 'private':
+      return fn(*args,**kwargs)
+    else:
+      return False
+  return wrapper
