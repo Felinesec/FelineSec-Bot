@@ -1,4 +1,4 @@
-from ping3 import ping, verbose_ping
+from ping3 import ping
 from admins import decorator
 from datetime import datetime
 
