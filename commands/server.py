@@ -9,19 +9,13 @@ import config
 from time import time
 from datetime import timedelta, datetime
 from psutil import cpu_percent, virtual_memory, boot_time
+from admins import decorator
 
+
+@decorator.restricted
 def server_handler(bot, update):
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     user = update.message.from_user
-    if not update.message.from_user.id in config.admin_list:
-        sudoers=("User not in the sudoers list.")
-        sudoers_markdown = "`" + sudoers + "`"
-        update.message.reply_markdown(sudoers_markdown)
-        print('User: {} con ID: {} '.format(user['username'], user['id'])
-              + "Ha provato ed eseguire il comando /server alle ore: " + messagetime
-              + "\n La sua richiesta \u00e8 stata rifiutata poich\u00e8 esso non rientra nella lista sudoers"
-              )
-        return
     text = (
         "Ecco qua le statistiche del server:\n\n"
         "CPU: " + str(cpu_percent())+"%\n"

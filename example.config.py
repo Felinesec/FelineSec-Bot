@@ -7,4 +7,5 @@
 #   Mozilla Public License
 #
 bot_token = "INSERT_TOKEN_HERE" # Token del bot
-admin_list = [1234567, 12345678] # Lista utenti "Sudoers"
+# admin_list = [1234567, 12345678]
+# Moved to admins/decorator.py

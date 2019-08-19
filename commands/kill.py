@@ -8,8 +8,9 @@
 import config
 from datetime import datetime
 import os
+from admins import decorator
 
-
+@decorator.ownerbot
 def kill_handler(bot, update):
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     user = update.message.from_user
