@@ -5,7 +5,6 @@
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
-import config
 from time import time
 from datetime import timedelta, datetime
 from psutil import cpu_percent, virtual_memory, boot_time

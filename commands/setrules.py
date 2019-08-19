@@ -9,7 +9,6 @@
 
 import json
 from datetime import datetime
-import config
 from admins import decorator
 
 @decorator.restricted

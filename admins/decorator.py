@@ -6,10 +6,6 @@
 #   Created by @Hersel91 and modified by Francesco Masala
 #   Mozilla Public License
 #
-
-import json
-from datetime import datetime
-
 from functools import wraps
 
 
