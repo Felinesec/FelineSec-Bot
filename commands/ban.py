@@ -3,7 +3,7 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Francesco Masala & @Hersel91
+#   Created by Francesco Masala
 #   Mozilla Public License
 #
 from admins import decorator
@@ -11,8 +11,10 @@ from admins import decorator
 
 @decorator.restricted
 @decorator.cancellacomandi
-def init(bot, update):
-    pass
-    if update.message.text is not None:
-        if update.message.text.startswith("/ban"):
-            bot.kick_chat_member(update.message.chat_id, update.message.reply_to_message.from_user.id)
+def ban_handler(bot, update):
+    user = update.message.from_user
+    text = ('User: {} con ID: {} '.format(user['username'], user['id'])
+          + "E' stato bannato con successo ")
+    update.message.reply_text(text)
+    user = update.message.from_user
+    bot.kick_chat_member(update.message.chat_id, update.message.reply_to_message.from_user.id)

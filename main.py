@@ -8,7 +8,7 @@
 import config
 import json
 import logging
-from commands import start, server, help, newuser, definisci, rules, setrules, kill, ping
+from commands import start, server, help, newuser, definisci, rules, setrules, kill, ping, ban
 from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
 import telegram
@@ -52,6 +52,7 @@ def main():
     updh(CommandHandler('setrules', setrules.setrules_handler))
     updh(CommandHandler('kill', kill.kill_handler))
     updh(CommandHandler('ping', ping.ping_handler))
+    updh(CommandHandler('ban', ban.ban_handler))
     dp.add_handler(CallbackQueryHandler(rules_button))
     dp.add_handler(MessageHandler(None, newuser.newuser_handler))
     dp.add_error_handler(error)
