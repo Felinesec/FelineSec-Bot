@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+#   ping.py
+#   Python 3.7
+#   Version 0.1
+#
+#   Created by Francesco Masala & Jack Rendor
+#   Mozilla Public License
+#
 from ping3 import ping
 from admins import decorator
 from datetime import datetime

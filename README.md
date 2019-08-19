@@ -19,7 +19,8 @@
 + **/setrules {arg}** per impostare le regole
 + **/rules** per vedere le regole
 + **/server** per avere le statistiche d'uso del server _( CPU, RAM, Uptime, Boot Time)_
-
++ **/help**: Mostra un riassunto dei comandi
++ **/ping**: effetua un ping su *google.com*
 
 
 ### :memo: Come creare un comando
@@ -98,18 +99,28 @@ Nel file _example.config.py_ c'è la configurazione di ad esempio **Bot Token** 
 |
 ├── +  commands
 |   |    __init__.py
-│   |    help.py
-│   |    newuser.py
-│   |    server.py
+|   |    build_menu.py
 |   |    definisci.py
+│   |    help.py
+|   |    kill.py
+│   |    newuser.py
+|   |    ping.py
+│   |    server.py
+|   |    setrules.py
 │   |    start.py
 |   └───
-|   
+|
+├── +  admins
+|   |    __init__.py
+|   |    decorator.py
+|   └───
+| 
 |     example.config.py
 |     main.py
 |     LICENSE.md
 |     README.md
 |     requirements.txt
+|     startup.sh
 └───
 
 ```
@@ -120,6 +131,7 @@ Nel file _example.config.py_ c'è la configurazione di ad esempio **Bot Token** 
 + python-telegram-bot
 + datetime
 + wikipedia
++ ping3
 
 
 

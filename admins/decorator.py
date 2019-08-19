@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-#   newuser.py
+#   decorator.py
 #   Python 3.7
 #   Version 0.1
 #

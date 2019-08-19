@@ -1,5 +1,5 @@
 #!/bin/bash
-#   script.sh
+#   startup.sh
 #   Bash shell
 #   Version 0.0.1
 #

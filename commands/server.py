@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #   server.py
 #   Python 3.7
 #   Version 0.1

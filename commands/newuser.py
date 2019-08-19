@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
-# coding=utf-8
-#
 #   newuser.py
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Francesco Masala & Talebian
+#   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
 
