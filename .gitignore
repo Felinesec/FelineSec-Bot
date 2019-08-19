@@ -19,3 +19,5 @@ __pycache__/config.cpython-37.pyc
 commands/__pycache__/
 
 \.DS_Store
+
+admins/__pycache__/
