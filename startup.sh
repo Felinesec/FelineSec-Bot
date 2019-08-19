@@ -22,7 +22,7 @@ function usage(){
 	echo "       --help              Display this page"
 	echo "       --start             Start the bot"
 	echo "       --update            Update bot"
-  echo "       --init              init build enviroment"
+  echo "       --init              Init bot enviroment"
 	echo ""
 }
 # Name and intro of the Script
@@ -49,5 +49,9 @@ elif [ "$1" = "--start" ]; then
 elif [ "$1" = "--update" ]; then
 	git pull
 	exit 0
-end
+elif [ "$1" = "--init" ]; then
+  am_i_root
+	echo "[!] Using root access [!]"
+	sudo pip3 install -r requirements.txt
+	exit 0
 fi
