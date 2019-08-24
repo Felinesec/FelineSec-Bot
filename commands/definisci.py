@@ -3,7 +3,7 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Talebian
+#   Created by Talebian , Modified by Hersel Giannella
 #   Mozilla Public License
 #
 
@@ -11,7 +11,7 @@
 import wikipedia as wiki
 from datetime import datetime
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
-from commands.build_menu import build_menu
+from utils import util
 
 
 def definisci_handler(bot, update):
@@ -23,7 +23,7 @@ def definisci_handler(bot, update):
     pg_url = pg.url
     definizione = pg.summary
     button_list = [InlineKeyboardButton("View on Wikipedia", url=pg_url)]
-    reply_markup = InlineKeyboardMarkup(build_menu(button_list, n_cols=1))
+    reply_markup = InlineKeyboardMarkup(util.build_menu(button_list, n_cols=1))
     text = "*{}:*\n\n{}".format(title, definizione)
     # Risposta del Bot
     update.message.reply_markdown(text, reply_markup=reply_markup)

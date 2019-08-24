@@ -2,12 +2,13 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Francesco Masala & Jack Rendor
+#   Created by Francesco Masala & Jack Rendor, Modified by Hersel Giannella
 #   Mozilla Public License
 #
 import config
 import json
 import logging
+import dialogs, utils
 from commands import start, server, help, newuser, definisci, rules, setrules, kill, ping, ban
 from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
@@ -24,7 +25,6 @@ def rules_button(bot, update):
         bot.send_message(query.message.chat_id,"*Regole:*\n\n{rules_txt}".format(rules_txt=rules), parse_mode=telegram.ParseMode.MARKDOWN)
 
 def main():
-
 
 
     # Messaggio di avvio
@@ -53,13 +53,17 @@ def main():
     updh(CommandHandler('kill', kill.kill_handler))
     updh(CommandHandler('ping', ping.ping_handler))
     updh(CommandHandler('ban', ban.ban_handler))
+    
+    
     dp.add_handler(CallbackQueryHandler(rules_button))
-    dp.add_handler(MessageHandler(None, newuser.newuser_handler))
-    dp.add_error_handler(error)
-
+    dp.add_handler(MessageHandler(None, dialogs.handler.init))
+    
     # Updater
+    dp.add_error_handler(error)
     updater.start_polling()
     updater.idle()
+    
+    
 
 
 if __name__ == "__main__":
