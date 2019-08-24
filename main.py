@@ -9,7 +9,7 @@ import config
 import json
 import logging
 import dialogs, utils
-from commands import start, server, help, newuser, definisci, rules, setrules, kill, ping, ban
+from commands import start, server, help, definisci, rules, setrules, kill, ping, ban
 from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
 import telegram
