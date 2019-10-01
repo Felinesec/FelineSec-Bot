@@ -9,7 +9,7 @@
 from datetime import datetime
 
 
-def help_handler(bot, update):
+def help_handler(update, context):
     text=(
         "*/server*: Indica le principali statistiche del server _(Uptime, utilizzo della cpu e della ram)_\n"
         "*/wiki {arg}*: cerca la definizione su wikipedia\n"

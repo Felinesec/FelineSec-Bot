@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-#   newuser.py
+#   welcome.py
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Francesco Masala & Jack Rendor
+#   Created by Francesco Masala, Jack Rendor and Hersel Giannella
 #   Mozilla Public License
 #
 
@@ -12,7 +12,7 @@ from utils import util
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from datetime import datetime
 
-def init(bot, update):
+def init(update, context):
     with open('commands/felinesec.rules.json') as f:
         data = json.load(f)
 
@@ -28,7 +28,7 @@ def init(bot, update):
                                       ' _leggere le regole_'
                                       ', premi su OT per raggiungere _il gruppo OT_, per Sito '
                                       'e Forum premi i corrispettivi pulsanti.'.format(
-                                                         username=update.message.from_user.username,
+                                                         username="@"+new.username,
                                                          user_id=update.message.from_user.id,
                                                          group=update.message.chat.title), reply_markup=reply_markup)
 

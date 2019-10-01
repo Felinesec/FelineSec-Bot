@@ -5,6 +5,6 @@
 #   Created by Francesco Masala and Hersel Giannella
 #   Mozilla Public License
 #
-__all__ = ["strings", "util"]
+__all__ = ["admin", "owner", "private_command", "delete"]
 
-from utils import *
+from utils.decorator import *

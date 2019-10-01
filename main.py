@@ -2,7 +2,7 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Francesco Masala & Jack Rendor, Modified by Hersel Giannella
+#   Created by Francesco Masala, Jack Rendor and Hersel Giannella
 #   Mozilla Public License
 #
 import config
@@ -15,7 +15,8 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryH
 import telegram
 
 
-def rules_button(bot, update):
+def rules_button(update, context):
+    bot = context.bot
     with open('commands/felinesec.rules.json') as f:
         data = json.load(f)
 
@@ -32,7 +33,7 @@ def main():
     print("Il bot e' stato avviato con successo alle :", starttime)
 
     # Token del Bot
-    updater = Updater(config.bot_token)
+    updater = Updater(config.bot_token, use_context=True)
 
     # Logging
     logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
@@ -53,17 +54,17 @@ def main():
     updh(CommandHandler('kill', kill.kill_handler))
     updh(CommandHandler('ping', ping.ping_handler))
     updh(CommandHandler('ban', ban.ban_handler))
-    
-    
+
+
     dp.add_handler(CallbackQueryHandler(rules_button))
     dp.add_handler(MessageHandler(None, dialogs.handler.init))
-    
+
     # Updater
     dp.add_error_handler(error)
     updater.start_polling()
     updater.idle()
-    
-    
+
+
 
 
 if __name__ == "__main__":

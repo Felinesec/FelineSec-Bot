@@ -1,3 +1,10 @@
-__all__ = ["handler", "welcome"]
+#   __init__.py
+#   Python 3.7
+#   Version 0.1
+#
+#   Created by Francesco Masala and Hersel Giannella
+#   Mozilla Public License
+#
+__all__ = ["handler", "welcome", "kali", "arch"]
 
 from dialogs import *

@@ -1,18 +1,31 @@
-import config
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup
+#   handler.py
+#   Python 3.7
+#   Version 0.1
+#
+#   Created by Francesco Masala and Hersel Giannella
+#   Mozilla Public License
+#
 from utils import util
-from . import welcome
+from . import welcome, kali, arch
 
-def example(bot, update):
-	if update.message is not None and update.message.text is not None: 
-		if str(update.message.text).lower().startswith("ciao felinesecbot"):
-			bot.send_message(update.message.chat_id, text="Ciao {username}"
-            .format(username=update.message.from_user.first_name), 
-            parse_mode='HTML')
+msg = ""
 
-#DICHIARAZIONE FUNZIONI
-def init(bot, update):
-    example(bot, update)
-    util.debug(update)
-    welcome.init(bot, update)
+def trigger(match):
+	return msg.lower().startswith(match.lower())
+
+#FUNCTION DECLARATION
+def init(update, context):
+	global msg
+
+	util.debug(update)
+	welcome.init(update, context)
+
+	if update.message is None or update.message.text is None:
+		return
+
+	msg = update.message.text
+
+	if trigger("kali linux"):
+		kali.init(update, context)
+	elif trigger("arch linux"):
+		arch.init(update, context)

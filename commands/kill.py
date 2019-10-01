@@ -9,10 +9,10 @@
 import config
 from datetime import datetime
 import os
-from admins import decorator
+from utils import decorator
 
-@decorator.ownerbot
-def kill_handler(bot, update):
+@decorator.owner.init
+def kill_handler(update, context):
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     user = update.message.from_user
     text = ('Il bot \u00e8 stato terminato')

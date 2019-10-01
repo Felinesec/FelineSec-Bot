@@ -7,12 +7,12 @@
 #   Mozilla Public License
 #
 from ping3 import ping
-from admins import decorator
+from utils import decorator
 from datetime import datetime
 
 
-@decorator.restricted
-def ping_handler(bot, update):
+@decorator.admin.init
+def ping_handler(update, context):
     ms = ping('google.com', unit='ms')
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     user = update.message.from_user

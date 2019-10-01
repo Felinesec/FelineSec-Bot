@@ -9,7 +9,7 @@
 from datetime import datetime
 
 
-def start_handler(bot, update):
+def start_handler(update, context):
     text = (
         "Benvenuto!\nEcco qua una lista dei comandi disponibili:\n"
         "/server\n"

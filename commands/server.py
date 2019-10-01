@@ -9,11 +9,11 @@
 from time import time
 from datetime import timedelta, datetime
 from psutil import cpu_percent, virtual_memory, boot_time
-from admins import decorator
+from utils import decorator
 
 
-@decorator.restricted
-def server_handler(bot, update):
+@decorator.admin.init
+def server_handler(update, context):
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
     user = update.message.from_user
     text = (

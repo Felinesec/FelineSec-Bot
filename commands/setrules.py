@@ -9,10 +9,10 @@
 
 import json
 from datetime import datetime
-from admins import decorator
+from utils import decorator
 
-@decorator.restricted
-def setrules_handler(bot, update):
+@decorator.admin.init
+def setrules_handler(update, context):
     user = update.message.from_user
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
 

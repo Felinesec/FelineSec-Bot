@@ -3,15 +3,15 @@
 #   Python 3.7
 #   Version 0.1
 #
-#   Created by Francesco Masala
+#   Created by Francesco Masala and Hersel Giannella
 #   Mozilla Public License
 #
-from admins import decorator
+from utils import decorator
 
 
-@decorator.restricted
-@decorator.cancellacomandi
-def ban_handler(bot, update):
+@decorator.admin.init
+@decorator.delete.init
+def ban_handler(update, context):
     user = update.message.from_user
     text = ('User: {} con ID: {} '.format(user['username'], user['id'])
           + "E' stato bannato con successo ")
