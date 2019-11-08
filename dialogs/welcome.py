@@ -24,7 +24,7 @@ def init(update, context):
     reply_markup = InlineKeyboardMarkup(util.build_menu(button_list, n_cols=2))
 
     for new in update.message.new_chat_members:
-        update.message.reply_markdown('Benvenuto @{username} _({user_id})_ su {group}, premi su Regole per'
+        update.message.reply_markdown('Benvenuto {username} _({user_id})_ su {group}, premi su Regole per'
                                       ' _leggere le regole_'
                                       ', premi su OT per raggiungere _il gruppo OT_, per Sito '
                                       'e Forum premi i corrispettivi pulsanti.'.format(
