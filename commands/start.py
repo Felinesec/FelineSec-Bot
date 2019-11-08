@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 #   start.py
 #   Python 3.7
-#   Version 0.1
+#   Version 0.3 "Acrux"
 #
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
@@ -13,7 +13,8 @@ def start_handler(update, context):
     text = (
         "Benvenuto!\nEcco qua una lista dei comandi disponibili:\n"
         "/server\n"
-        "Per altre informazioni fai /help"
+        "Per altre informazioni fai /help\n"
+        "Questa è la Versione 0.3 (Acrux)"
     )
     update.message.reply_text(text)
     user = update.message.from_user

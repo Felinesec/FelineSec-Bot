@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 #   setrules.py
 #   Python 3.7
-#   Version 0.1
+#   Version 0.3 "Acrux"
 #
 #   Created by Talebian & Francesco Masala
 #   Mozilla Public License
 #
-
 import json
 from datetime import datetime
 from utils import decorator

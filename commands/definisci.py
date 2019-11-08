@@ -1,13 +1,11 @@
 #!/usr/bin/env python3
 #   definisci.py
 #   Python 3.7
-#   Version 0.1
+#   Version 0.3 "Acrux"
 #
 #   Created by Talebian , Modified by Hersel Giannella
 #   Mozilla Public License
 #
-
-
 import wikipedia as wiki
 from datetime import datetime
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup

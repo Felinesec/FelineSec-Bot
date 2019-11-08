@@ -1,12 +1,12 @@
 #!/bin/bash
 #   startup.sh
 #   Bash shell
-#   Version 0.0.1
+#   Version 0.3 "Acrux"
 #
 #   Created by Francesco Masala & Jack Rendor
 #   Mozilla Public License
 #
-VERSION="0.2.2"
+VERSION="0.3 (Acrux)"
 # Root checker
 function am_i_root(){
 	if [[ $EUID -ne 0 ]]; then

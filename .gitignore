@@ -21,3 +21,9 @@ commands/__pycache__/
 \.DS_Store
 
 admins/__pycache__/
+
+dialogs/__pycache__/
+
+utils/__pycache__/
+
+utils/decorator/__pycache__/
