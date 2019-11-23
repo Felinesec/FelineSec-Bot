@@ -7,5 +7,6 @@
 #   Mozilla Public License
 #
 bot_token = "INSERT TOKEN HERE" # Token del bot
+Shodan = ('MY API KEY')
 LIST_OF_ADMINS = [44222507, 33003926, 358176315, 866272007]
 OWNER_LIST= [44222507, 33003926]

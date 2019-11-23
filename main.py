@@ -9,7 +9,7 @@ import config
 import json
 import logging
 import dialogs, utils
-from commands import start, server, help, definisci, rules, setrules, kill, ping, ban
+from commands import start, server, help, definisci, rules, setrules, kill, ping, ban, ip
 from datetime import datetime
 from telegram.ext import Updater, CommandHandler, MessageHandler, CallbackQueryHandler
 import telegram
@@ -54,6 +54,7 @@ def main():
     updh(CommandHandler('kill', kill.kill_handler))
     updh(CommandHandler('ping', ping.ping_handler))
     updh(CommandHandler('ban', ban.ban_handler))
+    updh(CommandHandler('ip', ip.ipshodan_handler))
 
 
     dp.add_handler(CallbackQueryHandler(rules_button))
