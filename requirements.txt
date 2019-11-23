@@ -3,3 +3,4 @@ python-telegram-bot
 wikipedia
 datetime
 ping3
+shodan-
