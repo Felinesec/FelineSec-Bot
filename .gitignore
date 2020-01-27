@@ -27,3 +27,5 @@ dialogs/__pycache__/
 utils/__pycache__/
 
 utils/decorator/__pycache__/
+
+venv/

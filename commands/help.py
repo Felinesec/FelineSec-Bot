@@ -7,6 +7,7 @@
 #   Mozilla Public License
 #
 from datetime import datetime
+from sentry_sdk import capture_message
 
 
 def help_handler(update, context):
@@ -20,6 +21,11 @@ def help_handler(update, context):
     )
     update.message.reply_markdown(text)
     user = update.message.from_user
-    messagetime = datetime.strftime(datetime.today(), '%H:%M %d/%m/%Y')
-    print('User: {} con ID: {} '.format(user['username'], user[
-        'id']) + "Ha appena eseguito il seguente comando: /help alle ore " + messagetime)
+    messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
+    comando = "help"
+    capture_message("Un utente con ID {} ha appena "
+                    .format(user['id']) +
+                    "effettuato il comando /" + comando)
+    print('User: {} con ID: {} '.format(user['username'], user['id'])
+          + "Ha appena eseguito il seguente comando: /" + comando +
+          " Alle ore " + messagetime)

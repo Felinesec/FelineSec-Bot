@@ -10,6 +10,7 @@ import wikipedia as wiki
 from datetime import datetime
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup
 from utils import util
+from sentry_sdk import capture_message
 
 
 def definisci_handler(update, context):
@@ -31,5 +32,10 @@ def definisci_handler(update, context):
     # LOG del bot
     user = update.message.from_user
     messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
+    comando = "wiki"
+    capture_message("Un utente con ID {} ha appena "
+                    .format(user['id']) +
+                    "effettuato il comando /" + comando)
     print('User: {} con ID: {} '.format(user['username'], user['id'])
-          + "Ha appena eseguito il seguente comando: /wiki alle ore " + messagetime)
+          + "Ha appena eseguito il seguente comando: /" + comando +
+          " Alle ore " + messagetime)

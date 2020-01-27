@@ -10,12 +10,11 @@ from time import time
 from datetime import timedelta, datetime
 from psutil import cpu_percent, virtual_memory, boot_time
 from utils import decorator
+from sentry_sdk import capture_message
 
 
 @decorator.admin.init
 def server_handler(update, context):
-    messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
-    user = update.message.from_user
     text = (
         "Ecco qua le statistiche del server:\n\n"
         "CPU: " + str(cpu_percent())+"%\n"
@@ -34,5 +33,14 @@ def server_handler(update, context):
 
     text_markdown = "`" + text + "`"
     update.message.reply_markdown(text_markdown)
-    print('User: {} con ID: {} '.format(user['username'], user['id'])
-          + "Ha appena eseguito il seguente comando: /server alle ore " + messagetime)
+
+    # Logging
+    user = update.message.from_user
+    messagetime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
+    comando = "server"
+    capture_message("Un amministratore con ID {} ha appena "
+                    .format(user['id']) +
+                    "effettuato il comando /" + comando)
+    print('Admin: {} con ID: {} '.format(user['username'], user['id'])
+          + "Ha appena eseguito il seguente comando: /" + comando +
+          " Alle ore " + messagetime)

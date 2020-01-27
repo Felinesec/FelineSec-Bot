@@ -6,7 +6,8 @@
 #   Mozilla Public License
 #
 from functools import wraps
-#DELETE COMMAND
+
+
 def init(func):
     @wraps(func)
     def wrapped(update, context):
