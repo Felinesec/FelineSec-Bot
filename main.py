@@ -33,8 +33,7 @@ def main():
     updater = Updater(config.bot_token, use_context=True)
     # Dichiarazione chiave Api di Sentry
     init(
-        config.SENTRY_API_KEY,
-        integrations=[TornadoIntegration()]
+        config.SENTRY_API_KEY
     )
     # Messaggio di avvio in console + sentry
     starttime = datetime.strftime(datetime.today(), '%H:%M del %d/%m/%Y')
